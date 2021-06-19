@@ -106,6 +106,6 @@
   <li>select * from 表名 （查看列的数据）</li>
   <li>select version() （查看版本，注意有小括号）</li>
   </ol>
-  <strong>tips:mysql的操作指令结尾需要加;或\g</strong>  
+  <strong>tips:mysql的操作指令结尾需要加;或\g（除了exit）</strong><br>
   <strong>tips:mysql的字符串类型为varchar</strong>
     
