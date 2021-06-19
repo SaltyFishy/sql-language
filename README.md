@@ -35,6 +35,44 @@
   </ol>
   附：Oracle上的mysql下载链接(https://dev.mysql.com/downloads/mysql/)<br>
   下载选择：
-  <img src="C:\Users\Rose\Desktop\每周blog\2021.6.19\1624077416(1).jpg" alt="a picture" title="choose this">
+  ![choose this](https://github.com/SaltyFishy/sql-language/blob/week1/download%20MySQL.png "it")
+  由于我们下载的是zip，解压缩之后需要自行配置环境变量，在win10系统中操作如下：
+  <ol>
+  <li>右键“我的电脑”，“属性”，“高级系统设置”，找到“高级”栏目，单击“环境变量”。</li>
+  <li>对变量Path编辑，添加你的mysql bin的路径。</li>
+  <li>环境变量配置完毕后，返回mysql主文件，手动创建data文件夹跟mysql.ini文件，并在mysql.ini文件下添加如下内容：<code>
+
+    [mysql]
+    
+    # 设置mysql客户端默认字符集
+    default-character-set=utf8 
+
+    [mysqld]
+
+    # 设置3306端口
+    port = 3306 
+
+    # 设置mysql的安装目录
+    basedir=(此处填写你的mysql目录)
+
+    # 设置mysql数据库的数据的存放目录
+    datadir=（此处填写你的mysql data目录）
+
+    # 允许最大连接数
+    max_connections=200
+
+    # 服务端使用的字符集默认为8比特编码的latin1字符集
+    character-set-server=utf8
+
+    # 创建新表时将使用的默认存储引擎
+    default-storage-engine=INNODB
+  </code>
+  </li>
+  <li>以管理员模式进入命令提示符窗口，输入以下指令：mysqld --initialize-insecure --user=mysql，回车。</li>
+  <li>接着输入：mysqld install，提示安装成功。</li>
+  <li>
+  
+  <li>
+  <ol>
     
     
