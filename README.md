@@ -35,7 +35,7 @@
   </ol>
   附：Oracle上的mysql下载链接(https://dev.mysql.com/downloads/mysql/)<br>
   下载选择：
-  ![choose this](https://github.com/SaltyFishy/sql-language/blob/week1/download%20MySQL.png)
+  <img src="https://github.com/SaltyFishy/sql-language/blob/week1/download%20MySQL.png" alt="download">
   由于我们下载的是zip，解压缩之后需要自行配置环境变量，在win10系统中操作如下：
   <ol>
   <li>右键“我的电脑”，“属性”，“高级系统设置”，找到“高级”栏目，单击“环境变量”。</li>
@@ -69,10 +69,11 @@
   </code>
   </li>
   <li>以管理员模式进入命令提示符窗口，输入以下指令：mysqld --initialize-insecure --user=mysql，回车。</li>
-  <li>接着输入：mysqld install，提示安装成功。</li>
-  <li>
-  
-  <li>
-  <ol>
+  <li>接着输入：mysqld install，提示安装成功。<img src="https://github.com/SaltyFishy/sql-language/blob/week1/successfully%20install.jpg" alt="successfully install"></li>
+  <li>启动服务，输入命令:net start mysql，回车。<img src="https://github.com/SaltyFishy/sql-language/blob/week1/working.jpg" alt="working"></li>
+  <li>服务启动成功之后，需要登录的时候输入命令：mysql -u root -p（第一次登录没有密码，直接按回车过）<img src="https://github.com/SaltyFishy/sql-language/blob/week1/login.jpg" alt="login"> </li>
+  <li>修改密码（必须先启动mysql），执行命令：mysqladmin -u root -p password回车，enter password也回车   <img src="https://github.com/SaltyFishy/sql-language/blob/week1/change%20password.jpg" alt="change password"></li>
+  <li>退出指令exit，直接关闭窗口是无效的。<img src="https://github.com/SaltyFishy/sql-language/blob/week1/exit.jpg" alt="exit"></li>
+  </ol>
     
     
