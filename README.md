@@ -76,7 +76,7 @@
   <li>退出指令exit，直接关闭窗口是无效的。<img src="https://github.com/SaltyFishy/sql-language/blob/week1/exit.jpg" alt="exit"></li>
   </ol>
   
-## 4 fundermental MySQL databases
+## fundermental MySQL databases
 ### mysql
     这个库里存有 Mysql的系统管理，包括权限、用户，时区、日志、主从设置等等
 ### information_schema
