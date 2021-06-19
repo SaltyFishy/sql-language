@@ -35,7 +35,7 @@
   </ol>
   附：Oracle上的mysql下载链接(https://dev.mysql.com/downloads/mysql/)<br>
   下载选择：
-  ![choose this](https://github.com/SaltyFishy/sql-language/blob/week1/download%20MySQL.png "it")
+  ![choose this](https://github.com/SaltyFishy/sql-language/blob/week1/download%20MySQL.png)
   由于我们下载的是zip，解压缩之后需要自行配置环境变量，在win10系统中操作如下：
   <ol>
   <li>右键“我的电脑”，“属性”，“高级系统设置”，找到“高级”栏目，单击“环境变量”。</li>
