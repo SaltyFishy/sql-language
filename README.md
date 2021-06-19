@@ -1,4 +1,4 @@
-# sql-language in week1(using MySQL)
+# sql-learning in week1(using MySQL)
 ## Basic concept：<br>
  DB（Database）  
  数据库，储存数据的“仓库”,他保存了一系列有组织的数据。  
@@ -75,5 +75,37 @@
   <li>修改密码（必须先启动mysql），执行命令：mysqladmin -u root -p password回车，enter password也回车   <img src="https://github.com/SaltyFishy/sql-language/blob/week1/change%20password.jpg" alt="change password"></li>
   <li>退出指令exit，直接关闭窗口是无效的。<img src="https://github.com/SaltyFishy/sql-language/blob/week1/exit.jpg" alt="exit"></li>
   </ol>
-    
+  
+## 4 fundermental MySQL databases
+### mysql
+    这个库里存有 Mysql的系统管理，包括权限、用户，时区、日志、主从设置等等
+### information_schema
+    保存一些数据信息
+### performance_schema
+    收集性能信息
+### test
+    保存测试数据（为空，可建表、删库）
+### sys
+    这个库里只有一个表，但包含了很多的系统视图和函数、存储过程
+## Conclusion
+  基本指令集（待完善）：
+  <ol>
+  <li>net start mysql（启动服务）</li>
+  <li>net stop mysql（终止服务）</li>
+  <li>mysql -u root -p（登录，原型为mysql -h（主机名，如本机则在后面加localhost，可与-h之间无空格） -P（端口号，我们默认设置的为3306，可与-P之间无空格） -u（用户名，默认为root，可与-u之间无空格） -p（密码，可显式写出，也可回车后隐式写出，注意显式写出时与-p之间不能有空格）</li>
+  <li>mysqladmin -u root -p password（修改密码）</li>
+  </ol>
+## 基本的mysql操作指令（待完善）：
+  <ol>
+  <li>show databases（展示数据库）</li>
+  <li>show tables （展示当下所在的数据库中的表）</li>
+  <li>show tables from 库名（展示库名所指的数据库中的表）</li>
+  <li>select database() （查看当前所在库，注意有小括号）</li>
+  <li>create table 表名(列名1 类型,列名2 类型(写入数字代表数组)······)（创建表）</li>
+  <li>desc 表名（查看表的结构）</li>
+  <li>select * from 表名 （查看列的数据）</li>
+  <li>select version() （查看版本，注意有小括号）</li>
+  </ol>
+  <strong>tips:mysql的操作指令结尾需要加;或\g</strong>
+  <strong>tips:mysql的字符串类型为varchar</strong>
     
