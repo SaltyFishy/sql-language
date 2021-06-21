@@ -41,6 +41,6 @@
   <li>F5刷新。</li>
 </ol>
 第一部分：基础查询
-<img src="https://github.com/SaltyFishy/sql-language/blob/week2/%E5%9F%BA%E7%A1%80%E6%9F%A5%E8%AF%A2.png" alt"基础查询">
+<img src="https://github.com/SaltyFishy/sql-language/blob/week2/%E5%9F%BA%E7%A1%80%E6%9F%A5%E8%AF%A2.png" alt="基础查询">
 
 <strong>备注：本人按照bilibili视频(https://www.bilibili.com/video/BV1xW411u7ax?p=18) 学习，此文档仅用作个人笔记&记录之用。</strong>
