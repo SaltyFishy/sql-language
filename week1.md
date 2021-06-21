@@ -87,7 +87,7 @@
     保存测试数据（为空，可建表、删库）
 ### sys
     这个库里只有一个表，但包含了很多的系统视图和函数、存储过程
-## Conclusion
+<h2> Conclusion</h2>
   基本指令集（待完善）：
   <ol>
   <li>net start mysql（启动服务）</li>
@@ -95,7 +95,7 @@
   <li>mysql -u root -p（登录，原型为mysql -h（主机名，如本机则在后面加localhost，可与-h之间无空格） -P（端口号，我们默认设置的为3306，可与-P之间无空格） -u（用户名，默认为root，可与-u之间无空格） -p（密码，可显式写出，也可回车后隐式写出，注意显式写出时与-p之间不能有空格）</li>
   <li>mysqladmin -u root -p password（修改密码）</li>
   </ol>
-## 基本的mysql操作指令（待完善）：
+<h2> 基本的mysql操作指令（待完善）</h2>
   <ol>
   <li>show databases（展示数据库）</li>
   <li>show tables （展示当下所在的数据库中的表）</li>
