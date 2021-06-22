@@ -40,7 +40,23 @@
   <li>单击执行或F9。</li>
   <li>F5刷新。</li>
 </ol>
-第一部分：基础查询
+<h4>进阶1 基础查询</h4>
 <img src="https://github.com/SaltyFishy/sql-language/blob/week2/%E5%9F%BA%E7%A1%80%E6%9F%A5%E8%AF%A2.png" alt="基础查询">
+语法：
+select 查询列表（可不止一个） from 表名;<br>
+此语句类似于java中的System.out.println();<br>
+特点:<ol>
+  <li>1.查询列表可以为：表中的列（字段），函数，常量，表达式</li>
+<li>2.查询的结果为虚拟的表格</li>
+</ol>
+实例:<ol>
+<li>1.查询表中的（单个）字段<br>
+  如select email from employees;</li>
+<li>2.查询表中的多个字段（注意：列的顺序可任意，只需要名字正确即可）<br>
+  如select email,salary from employees;</li>
+<li>3.查询表中的所有字段（使用了*则虚拟表的顺序与原表中一致）<br>
+  如select * from employees;</li>
+</ol>
+
 
 <strong>备注：本人按照bilibili视频(https://www.bilibili.com/video/BV1xW411u7ax?p=18) 学习，此文档仅用作个人笔记&记录之用。</strong>
