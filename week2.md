@@ -27,7 +27,7 @@
 调整字体：“工具-首选项-字体编辑器设置” 也可用ctrl+鼠标滚动键调整字体大小，此处不做演示。
 <h2>SQL语言学习</h2>
 <ol>
-  <li>DQL(Data Query Language)语言，主要用于查询。</li>
+  <li>DQL（Data Query Language）语言，主要用于查询。</li>
   <li>DML（Data Manipulation Language）语言，主要用于增删改。</li>
   <li>DDL（Data Defination Language）语言，库与表的操作核心语言。</li>
   <li>TCL（Transaction Control Language）语言，事务与事务的管理。</li>
@@ -47,16 +47,47 @@ select 查询列表（可不止一个） from 表名;<br>
 此语句类似于java中的System.out.println();<br>
 特点:<ol>
   <li>1.查询列表可以为：表中的列（字段），函数，常量，表达式</li>
-<li>2.查询的结果为虚拟的表格</li>
-</ol>
+  <li>2.查询的结果为虚拟的表格</li>
+     </ol>
+<strong>查询时的一些细节注意:注意使用select指令的时候，需要在对应的库中执行，所以每当使用select命令时记得先USE 库名;</strong><br>
 实例:<ol>
 <li>1.查询表中的（单个）字段<br>
   如select email from employees;</li>
 <li>2.查询表中的多个字段（注意：列的顺序可任意，只需要名字正确即可）<br>
   如select email,salary from employees;</li>
 <li>3.查询表中的所有字段（使用了*则虚拟表的顺序与原表中一致）<br>
-  如select * from employees;</li>
+  如select * from employees;<br>
+  tips:还可以直接双击对应的字段，会自动添加，此处添加的表名会带''，仅为了提升可读性（避免出现字段名与关键字同名时的二义性），可按F12进行格式规范化。</li>
+<li>查询常量：select 常量;<br>
+  如select 'join';</li>
+<li>查询表达式：select 表达式;<br>
+  如select 100+90;</li>
+<li>查询函数：select 函数();<br>
+  如select version()（调用该函数，并取其返回值）</li>
+<li>起别名（对常量与表达式）：select 表达式、常量 as(可省略) 别名;<br>
+   如select 100%98 as number;<br>
+   起别名（对字段）：select 字段名 as(可省略) 别名 from 表名;<br>
+   如select name as 名 from employees;<br>
+  <strong>起别名很重要，能帮助理解，也能在查询字段出现重名时区分。</strong><br>
+  <strong>当别名出现关键字时，可以用双引号""或''将别名括起。</strong></li>
+ <li>去重：select distinct 字段名 from 表名;<br>
+   如select distinct name from employees;（注意加没加distinct的不同在于，对于同一个name，没加distinct会多次输出，加了就只输出一次）</li>
+  <li>+号的作用：<br>
+  <strong>mysql中的+仅作为加法运算符，返回值为数字。<br>
+    实例：
+      <ol>
+    <li>select 100+90;得到的结果为数字190;</li>
+    <li>select '123'+90;会试图将字符转换为数字，再进行加法运算，若转换成功则得到结果：数字213。<br>
+        转换失败如select 'join'+90;会将字符串转换为0，得到结果数字90。<br>
+        若+前后至少有一个为null，得到结果必为null。</li>
+      </ol></li></strong>
+  <li>使用concat函数实现连接：select concat(字段名1,字段名2·······);（可以填入字符，用''括起）<br>
+  如select concat(last_name,first_name) as 姓名 from employees;（将姓与名组合输出姓名）<br>
+  <strong>null与任何字段拼接得到的结果必为null。为了避免此类错误，可以使用ifnull函数，方法为：ifnull(可能为null,当真的为null时返回何值)</strong>
+  </li>
 </ol>
+
+
 
 
 <strong>备注：本人按照bilibili视频(https://www.bilibili.com/video/BV1xW411u7ax?p=18) 学习，此文档仅用作个人笔记&记录之用。</strong>
