@@ -39,7 +39,7 @@ select 查询列表 from 表名 where 筛选条件;<br>
       </li>
       <li>between and<br>
       SELECT * FROM employees WHERE department_id BETWEEN 90 AND 110;（查询部门id在90到110之间的员工信息）<br>
-      等价于 SELECT * FROM employees WHERE department_id >=90 AND department_id <= 110;
+      等价于 SELECT * FROM employees WHERE department_id >=90 AND department_id <= 110;<br>
       <strong>注意，between and关键字的区间是包含两个区间端点的，并且一定要有上下限之分，不可颠倒顺序（不会报错，但是结果不是预期）</strong></li>
       <li>in（判断某字段的值是否属于列表的某一项）<br>
       SELECT job_id,last_name FROM employees WHERE job_id IN ('AD_VP', 'IT_PROT', 'AD_PRES');（查询员工工种编号为AD_VP IT_PROT AD_PRES中的一个员工的工种编号与姓）<br>
