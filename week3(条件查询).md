@@ -116,10 +116,10 @@ SELECT * FROM employees WHERE commission_pct IS NOT NULL;#查询非NULL
       		如
 
 ```mysql
-SELECT * FROM employees WHERE commission_pct <=> NULL;  ```
+SELECT * FROM employees WHERE commission_pct <=> NULL;
+```
 <br>
-
-      		但是会降低可读性
+			但是会降低可读性
       		</li>
 		</ol>
 	</li>
