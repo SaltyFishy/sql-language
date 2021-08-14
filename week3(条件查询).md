@@ -78,7 +78,8 @@ SELECT * FROM employees WHERE department_id >=90 AND department_id <= 110;
 			<li>in（判断某字段的值是否属于列表的某一项）
 
 ```mysql
-SELECT job_id,last_name FROM employees WHERE job_id IN ('AD_VP', 'IT_PROT', 'AD_PRES');#查询员工工种编号为AD_VP IT_PROT AD_PRES中的一个员工的工种编号与姓
+SELECT job_id,last_name FROM employees WHERE job_id IN ('AD_VP', 'IT_PROT', 'AD_PRES');
+#查询员工工种编号为AD_VP IT_PROT AD_PRES中的一个员工的工种编号与姓
 ```
 <br>
 				等价于
@@ -117,6 +118,7 @@ SELECT * FROM employees WHERE commission_pct IS NOT NULL;#查询非NULL
 ```mysql
 SELECT * FROM employees WHERE commission_pct <=> NULL;  ```
 <br>
+
       		但是会降低可读性
       		</li>
 		</ol>
