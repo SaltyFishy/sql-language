@@ -190,12 +190,6 @@ truncate table 表名;
 <br>
 <strong>删除为删除整表</strong><br>
 <strong>不能加where</strong><br>
-例：删除魅力值大于100的男生
-
-```mysql
-
-```
-<br>
 <h3>delete与truncate对比</h3>
 <img src="https://github.com/SaltyFishy/sql-language/blob/week10/delete%E4%B8%8Etruncate%E5%AF%B9%E6%AF%94.jpg" alt="delete与truncate对比">
 
