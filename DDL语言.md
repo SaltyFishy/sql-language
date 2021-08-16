@@ -86,7 +86,8 @@ alter table 表名 add|drop|modify|change|rename to column 列名 [列类型 约
 	<li>修改列名
 
 ```mysql
-ALTER TABLE book CHANGE COLUMN publish_date publishDate DATETIME; #修改book表下publish_date列列名为publishDate
+ALTER TABLE book CHANGE COLUMN publish_date publishDate DATETIME; 
+#修改book表下publish_date列列名为publishDate
 #column可以省略
 ```
 <br>
@@ -142,6 +143,7 @@ create database if not exists 新库;
 ```
 <br>
 表：
+
 ```mysql
 derp table if exists 旧表;
 create table if not exists 新表(
@@ -153,7 +155,29 @@ create table if not exists 新表(
 <br>
 </strong>
 <h4>库的复制</h4>
+<h5>复制表的结构</h5>
 
+```mysql
+CREATE TABLE copy_author_1 LIKE author;
+#复制author的结构给copy_author_1
+```
+<h5>复制表的数据+结构</h5>
 
+```mysql
+CREATE TABLE copy_author_2
+SELECT * FROM author; 
+#复制author的所有数据与结构给copy_author_2
+CREATE TABLE copy_author_3
+SELECT id,au_name
+FROM author
+WHERE nation = 'CN';
+#复制author中nation = CN的数据中的id和au_name给copy_author_3
+CREATE TABLE copy_author_4
+SELECT id,au_name
+FROM author
+WHERE NULL;
+#复制author表中的id和au_name的结构给copy_author_4
+```
+<br>
 
 
