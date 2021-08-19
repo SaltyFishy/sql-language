@@ -306,15 +306,40 @@ create table if not exists 新表(
 </strong>
 <h5>标识列（又称自增长列）</h5>
 含义：可以不用手动的插入值，系统提供默认的序列值<br>
+关键字：AUTO_INCREMENT<br>
+<img src="https://github.com/SaltyFishy/sql-language/blob/week10/%E6%A0%87%E8%AF%86%E5%88%97%E7%89%B9%E7%82%B9.jpg" alt="标识列特点"><br>
 创建表时设置：
 
 ```mysql
-
+DROP TABLE IF EXISTS tab;
+CREATE TABLE IF NOT EXISTS tab(
+	id INT AUTO_INCREMENT,
+	NAME VARCHAR(20) UNIQUE
+)
 ```
 <br>
+mysql中存在默认的auto_increment变量：
+<img src="https://github.com/SaltyFishy/sql-language/blob/week10/%E9%BB%98%E8%AE%A4%E7%9A%84auto_increment%E5%8F%98%E9%87%8F.jpg" alt="默认的auto_increment变量"><br>
+第一个变量为步长（指每一步自增多少，可以修改），第二个变量为起始值（指自增长列的第一个值，可以通过插入的第一个数据修改）
 
+修改步长：
 
+```mysql
+SET auto_increment_increment = 3;#修改步长为3
+```
+<br>
+修改表时设置标识列：
 
+```mysql
+ALTER TABLE tab MODIFY COLUMN id INT PRIMARY KEY AUTO_INCREMENT;
+```
+<br>
+修改表时删除标识列：
+
+```mysql
+ALTER TABLE tab MODIFY COLUMN id INT PRIMARY KEY;
+```
+<br>
 <h4>库的复制</h4>
 <h5>复制表的结构</h5>
 
