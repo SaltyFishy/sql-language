@@ -235,6 +235,8 @@ ALTER TABLE stuinfo MODIFY COLUMN gender CHAR UNIQUE;
 #添加gender字段约束为unique（列级约束写法）
 ALTER TABLE stuinfo ADD UNIQUE(seat);
 #添加seat字段约束unique（表级约束写法）
+alter table 表名 add constraint 外键约束名 foreign key(列名) references 引用外键表
+#创建外键约束格式
 
 #删除约束：
 ALTER TABLE stuinfo MODIFY COLUMN age INT NOT NULL;
