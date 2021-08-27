@@ -51,7 +51,7 @@ ROLLBACK;#再执行此处的代码（回滚失败）
 对于同时运行的多个事务，当这些事务访问**数据库中相同的数据时**，如果没有采取必要的隔离措施，就会导致并发问题。<br>
 常见并发问题：
 <ul>
-	<li>脏读：对于两个事务a、b，a读取了已经被b更新却还没有被提交的字段，之后，若b回滚，则a读取的数据就是临时且无效的（脏读只在读未提交隔离级别才会出现）
+	<li>脏读：对于两个事务a、b，a读取了已经被b更新却还没有被提交的字段，之后，若b回滚，则a读取的数据就是临时且无效的（脏读只在读未提交隔离级别才会出现）<br>
 	<img src="https://github.com/SaltyFishy/sql-language/blob/week11/%E8%84%8F%E8%AF%BB%E7%A4%BA%E6%84%8F%E5%9B%BE.png" alt="脏读示意图"></li>
 	<li>不可重复读：对于两个事务a、b，a读取了一个字段，然后b更新了该字段，之后a重新读取了该字段，值不同（不可重复读在读未提交和读已提交隔离级别都可能会出现）
 	<img src="https://github.com/SaltyFishy/sql-language/blob/week11/%E4%B8%8D%E5%8F%AF%E9%87%8D%E5%A4%8D%E8%AF%BB%E7%A4%BA%E6%84%8F%E5%9B%BE.jpg" alt="不可重复读示意图"><br>
