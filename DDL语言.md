@@ -207,6 +207,27 @@ CREATE TABLE IF NOT EXISTS stuinfo(
 	<li>插入数据时先插主表的数据，在插入从表数据</li>
 	<li>删除数据时先删除从表，再删除主表</li>
 </ol>
+外键的删除：<br>
+以如图所示表为例：<br>
+<img src="https://github.com/SaltyFishy/sql-language/blob/week10/stuinfo%E4%B8%8Emajor%E8%A1%A8.jpg" alt="stuinfo与major表">
+
+```mysql
+#对于外键，不能直接删除主表，要从从表开始删除数据
+#但是有两种方法可以处理
+
+#方法一：级联删除
+ALTER TABLE stuinfo ADD CONSTRAINT fk_stu_major FOREIGN KEY(major_id) REFERENCES major(id) ON DELETE CASCADE;
+#注意，如果已经有了外键那么先删除外键再重新建立外键
+#后可以直接删除主表数据，同时会删除从表外键中跟主表相关的数据
+DELETE FROM major WHERE id = 3;
+
+#方法二：级联置空
+ALTER TABLE stuinfo ADD CONSTRAINT fk_stu_major2 FOREIGN KEY(major_id) REFERENCES major(id) ON DELETE SET NULL;
+#注意，如果已经有了外键那么先删除外键再重新建立外键
+#后可以直接删除主表数据，同时会置空（设置为NULL）从表外键中跟主表相关的数据
+DELETE FROM major WHERE id = 3;
+```
+<br>
 <h4>表的修改</h4>
 语法：
 
